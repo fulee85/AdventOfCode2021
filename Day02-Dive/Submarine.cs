@@ -5,33 +5,26 @@ public abstract class Submarine
     protected long horisontalPosition = 0;
     protected long depthPosition = 0;
 
-    public void Run(IEnumerable<string> instructions)
+    public void Run(string command, int value)
     {
-        foreach (var instruction in instructions)
+        switch (command)
         {
-            var instructionParts = instruction.Split();
-            var command = instructionParts[0];
-            var value = int.Parse(instructionParts[1]);
+            case "forward": 
+                Forward(value); 
+                break;
+            case "down": 
+                Down(value); 
+                break;
+            case "up":
+                Up(value);
+                break;
+            default:
+                throw new Exception("Unknown command");
+        }
 
-            switch (command)
-            {
-                case "forward": 
-                    Forward(value); 
-                    break;
-                case "down": 
-                    Down(value); 
-                    break;
-                case "up":
-                    Up(value);
-                    break;
-                default:
-                    throw new Exception("Unknown command");
-            }
-
-            if (depthPosition < 0)
-            {
-                throw new Exception();
-            }
+        if (depthPosition < 0)
+        {
+            throw new Exception();
         }
     }
 

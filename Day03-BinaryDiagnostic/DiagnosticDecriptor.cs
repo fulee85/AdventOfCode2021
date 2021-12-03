@@ -1,94 +1,84 @@
-﻿namespace Day03_BinaryDiagnostic
+﻿namespace Day03_BinaryDiagnostic;
+
+public class DiagnosticDecriptor
 {
-    public class DiagnosticDecriptor
+    private readonly List<BinaryNumber> input;
+
+    public DiagnosticDecriptor(IEnumerable<string> input)
     {
-        private readonly List<BinaryNumber> input;
+        this.input = input.Select(s => new BinaryNumber(s)).ToList();
+    }
 
-        public DiagnosticDecriptor(IEnumerable<string> input)
+    public int GetPowerConsumption()
+    {
+        var binLength = input[0].Length;
+        var gammaRate = new BinaryNumber();
+        var epsilonRate = new BinaryNumber();
+
+        for (int i = 0; i < binLength; i++)
         {
-            this.input = input.Select(s => new BinaryNumber(s)).ToList();
+            SeparateBinaryNumbersByDigitInPosition(i, input, out var containsOneInPosition, out var containsZeroInPosition);
+            if (containsOneInPosition.Count > containsZeroInPosition.Count)
+            {
+                gammaRate.AddDigit(1);
+                epsilonRate.AddDigit(0);
+            }
+            else
+            {
+                gammaRate.AddDigit(0);
+                epsilonRate.AddDigit(1);
+            }
         }
 
-        public int GetPowerConsumption()
+        return checked(gammaRate.GetDecimalValue() * epsilonRate.GetDecimalValue());
+    }
+
+    public int GetLifeSupportRating()
+    {
+        return checked(GetOxygenGeneratorRating() * GetCO2ScrubberRating());
+    }
+
+    private int GetOxygenGeneratorRating()
+        => GetRatingValue((containsOneInPosition, containsZeroInPosition)
+            => containsOneInPosition.Count >= containsZeroInPosition.Count ? containsOneInPosition : containsZeroInPosition);
+    private int GetCO2ScrubberRating() 
+        => GetRatingValue((containsOneInPosition, containsZeroInPosition)
+            => containsOneInPosition.Count < containsZeroInPosition.Count ? containsOneInPosition : containsZeroInPosition);
+
+    private int GetRatingValue(Func<List<BinaryNumber>, List<BinaryNumber>, List<BinaryNumber>> rule)
+    {
+        var itemsUnderCheck = input;
+        var positionUnderCheck = 0;
+
+        while (itemsUnderCheck.Count > 1)
         {
-            var binLength = input[0].Length;
-            var oneCounts = new int[binLength];
-
-            foreach (var binNum in input)
-            {
-                for (int i = 0; i < binNum.Length; i++)
-                {
-                    if (binNum.IsOneInPosition(i))
-                    {
-                        oneCounts[i]++;
-                    }
-                    else
-                    {
-                        oneCounts[i]--;
-                    }
-                }
-            }
-
-            var gammaRate = new BinaryNumber();
-            var epsilonRate = new BinaryNumber();
-            for (int i = 0; i < oneCounts.Length; i++)
-            {
-                if (oneCounts[i] > 0)
-                {
-                    gammaRate.AddDigit(1);
-                    epsilonRate.AddDigit(0);
-                }
-                else
-                {
-                    gammaRate.AddDigit(0);
-                    epsilonRate.AddDigit(1);
-                }
-            }
-
-            return checked(gammaRate.GetDecimalValue() * epsilonRate.GetDecimalValue());
+            SeparateBinaryNumbersByDigitInPosition(positionUnderCheck, itemsUnderCheck, out var containsOneInPosition, out var containsZeroInPosition);
+            itemsUnderCheck = rule(containsOneInPosition, containsZeroInPosition);
+            positionUnderCheck++;
         }
 
-        public int GetLifeSupportRating()
+        return itemsUnderCheck.First().GetDecimalValue();
+    }
+
+    private static void SeparateBinaryNumbersByDigitInPosition(
+        int position,
+        List<BinaryNumber> items,
+        out List<BinaryNumber> containsOneInPosition,
+        out List<BinaryNumber> containsZeroInPosition)
+    {
+        containsZeroInPosition = new List<BinaryNumber>();
+        containsOneInPosition = new List<BinaryNumber>();
+
+        foreach (var item in items)
         {
-            return checked(GetOxygenGeneratorRating() * GetCO2ScrubberRating());
-        }
-
-        private int GetOxygenGeneratorRating() 
-            => GetFilteredValue((containsOneInPosition, containsZeroInPosition)
-                => containsOneInPosition.Count >= containsZeroInPosition.Count ? containsOneInPosition : containsZeroInPosition);
-
-        private int GetCO2ScrubberRating() 
-            => GetFilteredValue((containsOneInPosition, containsZeroInPosition)
-                => containsOneInPosition.Count < containsZeroInPosition.Count ? containsOneInPosition : containsZeroInPosition);
-
-        private int GetFilteredValue(Func<List<BinaryNumber>, List<BinaryNumber>, List<BinaryNumber>> filterRule)
-        {
-            var containsOneInPosition = new List<BinaryNumber>();
-            var containsZeroInPosition = new List<BinaryNumber>();
-            var possibleRatingValues = input;
-            var positionUnderCheck = 0;
-
-            while (possibleRatingValues.Count > 1)
+            if (item.IsOneInPosition(position))
             {
-                foreach (var item in possibleRatingValues)
-                {
-                    if (item.IsOneInPosition(positionUnderCheck))
-                    {
-                        containsOneInPosition.Add(item);
-                    }
-                    else
-                    {
-                        containsZeroInPosition.Add(item);
-                    }
-                }
-
-                possibleRatingValues = filterRule(containsOneInPosition, containsZeroInPosition);
-                containsOneInPosition = new List<BinaryNumber>();
-                containsZeroInPosition = new List<BinaryNumber>();
-                positionUnderCheck++;
+                containsOneInPosition.Add(item);
             }
-
-            return possibleRatingValues.First().GetDecimalValue();
+            else
+            {
+                containsZeroInPosition.Add(item);
+            }
         }
     }
 }

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day01-Sonar Sweep", "Day01-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day02-Dive", "Day02-Dive\Day02-Dive.csproj", "{7EF90869-D17E-449D-B864-37F65C2A278C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day03-BinaryDiagnostic", "Day03-BinaryDiagnostic\Day03-BinaryDiagnostic.csproj", "{5E0E26D1-E0C6-4461-AA64-239FDE3FFA04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day03-BinaryDiagnostic", "Day03-BinaryDiagnostic\Day03-BinaryDiagnostic.csproj", "{5E0E26D1-E0C6-4461-AA64-239FDE3FFA04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D0EF621D-8296-4B4F-B7A7-6438E80A7C85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{D0EF621D-8296-4B4F-B7A7-6438E80A7C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day04-GiantSquid", "Day04-GiantSquid\Day04-GiantSquid.csproj", "{116AC5D7-24FB-498C-BF58-FD2C77D12100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D0EF621D-8296-4B4F-B7A7-6438E80A7C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0EF621D-8296-4B4F-B7A7-6438E80A7C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0EF621D-8296-4B4F-B7A7-6438E80A7C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116AC5D7-24FB-498C-BF58-FD2C77D12100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116AC5D7-24FB-498C-BF58-FD2C77D12100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116AC5D7-24FB-498C-BF58-FD2C77D12100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116AC5D7-24FB-498C-BF58-FD2C77D12100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

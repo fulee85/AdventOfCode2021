@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Day03-BinaryDiagnostic\Day03-BinaryDiagnostic.csproj" />
     <ProjectReference Include="..\Day04-GiantSquid\Day04-GiantSquid.csproj" />
+    <ProjectReference Include="..\Day05-HydrothermalVenture\Day05-HydrothermalVenture.csproj" />
   </ItemGroup>
 
 </Project>

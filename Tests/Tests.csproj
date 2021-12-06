@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -25,6 +25,7 @@
     <ProjectReference Include="..\Day03-BinaryDiagnostic\Day03-BinaryDiagnostic.csproj" />
     <ProjectReference Include="..\Day04-GiantSquid\Day04-GiantSquid.csproj" />
     <ProjectReference Include="..\Day05-HydrothermalVenture\Day05-HydrothermalVenture.csproj" />
+    <ProjectReference Include="..\Day06-Lanternfish\Day06-Lanternfish.csproj" />
   </ItemGroup>
 
 </Project>

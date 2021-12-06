@@ -2,7 +2,7 @@
 
 public class Lanternfish
 {
-    private int internalTimer;
+    private readonly int internalTimer;
     private readonly int daysToLive;
 
     private static readonly Dictionary<Lanternfish, long> descendantCountDict = new Dictionary<Lanternfish,long>();
@@ -24,24 +24,20 @@ public class Lanternfish
             return descendantCountDict[this];
         }
 
-        long descendantCount = 0;
         int daysToLiveYet = daysToLive;
         if (daysToLiveYet <= internalTimer)
         {
             return 0;
         }
-
         daysToLiveYet -= internalTimer + 1;
-        descendantCount++;
-        var firstDescendant = new Lanternfish(daysToLiveYet);
-        descendantCount += firstDescendant.GetAllDescendantCount();
 
-        while (daysToLiveYet >= 7)
+        long descendantCount = 0;
+        while (daysToLiveYet >= 0)
         {
-            daysToLiveYet -= 7;
             descendantCount++;
             var descendant = new Lanternfish(daysToLiveYet);
             descendantCount += descendant.GetAllDescendantCount();
+            daysToLiveYet -= 7;
         }
 
         descendantCountDict.Add(this, descendantCount);

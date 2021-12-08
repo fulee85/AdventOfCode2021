@@ -27,6 +27,7 @@
     <ProjectReference Include="..\Day05-HydrothermalVenture\Day05-HydrothermalVenture.csproj" />
     <ProjectReference Include="..\Day06-Lanternfish\Day06-Lanternfish.csproj" />
     <ProjectReference Include="..\Day07-TheTreacheryOfWhales\Day07-TheTreacheryOfWhales.csproj" />
+    <ProjectReference Include="..\Day08-SevenSegmentSearch\Day08-SevenSegmentSearch.csproj" />
   </ItemGroup>
 
 </Project>

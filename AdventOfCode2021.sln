@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day06-Lanternfish", "Day06-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day07-TheTreacheryOfWhales", "Day07-TheTreacheryOfWhales\Day07-TheTreacheryOfWhales.csproj", "{3DFA4D27-F830-4137-AF51-91A7C1C95DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day08-SevenSegmentSearch", "Day08-SevenSegmentSearch\Day08-SevenSegmentSearch.csproj", "{D8FA01D0-34A8-4C13-B515-4CA17F40FAD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day08-SevenSegmentSearch", "Day08-SevenSegmentSearch\Day08-SevenSegmentSearch.csproj", "{D8FA01D0-34A8-4C13-B515-4CA17F40FAD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day09-SmokeBasin", "Day09-SmokeBasin\Day09-SmokeBasin.csproj", "{1C6E63C9-8085-40D4-8293-E9ABA60E092E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D8FA01D0-34A8-4C13-B515-4CA17F40FAD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8FA01D0-34A8-4C13-B515-4CA17F40FAD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8FA01D0-34A8-4C13-B515-4CA17F40FAD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C6E63C9-8085-40D4-8293-E9ABA60E092E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6E63C9-8085-40D4-8293-E9ABA60E092E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6E63C9-8085-40D4-8293-E9ABA60E092E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6E63C9-8085-40D4-8293-E9ABA60E092E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -28,6 +28,7 @@
     <ProjectReference Include="..\Day06-Lanternfish\Day06-Lanternfish.csproj" />
     <ProjectReference Include="..\Day07-TheTreacheryOfWhales\Day07-TheTreacheryOfWhales.csproj" />
     <ProjectReference Include="..\Day08-SevenSegmentSearch\Day08-SevenSegmentSearch.csproj" />
+    <ProjectReference Include="..\Day10-SyntaxScoring\Day10-SyntaxScoring.csproj" />
   </ItemGroup>
 
 </Project>

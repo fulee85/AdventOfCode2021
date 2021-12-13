@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day11-DumboOctopus", "Day11
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day12-PassagePathing", "Day12-PassagePathing\Day12-PassagePathing.csproj", "{1F60D213-C70F-42B4-B77B-9509ACFC346E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day13-TransparentOrigami", "Day13-TransparentOrigami\Day13-TransparentOrigami.csproj", "{6C9D2590-FDF3-4D7E-B35C-52BEE6FC4C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day13-TransparentOrigami", "Day13-TransparentOrigami\Day13-TransparentOrigami.csproj", "{6C9D2590-FDF3-4D7E-B35C-52BEE6FC4C68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

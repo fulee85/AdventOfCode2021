@@ -30,6 +30,8 @@
     <ProjectReference Include="..\Day08-SevenSegmentSearch\Day08-SevenSegmentSearch.csproj" />
     <ProjectReference Include="..\Day10-SyntaxScoring\Day10-SyntaxScoring.csproj" />
     <ProjectReference Include="..\Day11-DumboOctopus\Day11-DumboOctopus.csproj" />
+    <ProjectReference Include="..\Day12-PassagePathing\Day12-PassagePathing.csproj" />
+    <ProjectReference Include="..\Day13-TransparentOrigami\Day13-TransparentOrigami.csproj" />
   </ItemGroup>
 
 </Project>

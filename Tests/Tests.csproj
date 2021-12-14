@@ -32,6 +32,7 @@
     <ProjectReference Include="..\Day11-DumboOctopus\Day11-DumboOctopus.csproj" />
     <ProjectReference Include="..\Day12-PassagePathing\Day12-PassagePathing.csproj" />
     <ProjectReference Include="..\Day13-TransparentOrigami\Day13-TransparentOrigami.csproj" />
+    <ProjectReference Include="..\Day14-ExtendedPolymerization\Day14-ExtendedPolymerization.csproj" />
   </ItemGroup>
 
 </Project>

@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day12-PassagePathing", "Day
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day13-TransparentOrigami", "Day13-TransparentOrigami\Day13-TransparentOrigami.csproj", "{6C9D2590-FDF3-4D7E-B35C-52BEE6FC4C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14-ExtendedPolymerization", "Day14-ExtendedPolymerization\Day14-ExtendedPolymerization.csproj", "{4BE80DAD-AF11-482E-BC17-52C4EB520A81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day14-ExtendedPolymerization", "Day14-ExtendedPolymerization\Day14-ExtendedPolymerization.csproj", "{4BE80DAD-AF11-482E-BC17-52C4EB520A81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day15-Chiton", "Day15-Chiton\Day15-Chiton.csproj", "{8BFF27AD-829D-4531-A34D-D4B734A443D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{4BE80DAD-AF11-482E-BC17-52C4EB520A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BE80DAD-AF11-482E-BC17-52C4EB520A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BE80DAD-AF11-482E-BC17-52C4EB520A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFF27AD-829D-4531-A34D-D4B734A443D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFF27AD-829D-4531-A34D-D4B734A443D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFF27AD-829D-4531-A34D-D4B734A443D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFF27AD-829D-4531-A34D-D4B734A443D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

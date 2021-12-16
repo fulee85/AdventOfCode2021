@@ -3,7 +3,7 @@
     public class Solver
     {
         private readonly LinkedList<char> polymerTemplate;
-        public static readonly Dictionary<string, char> polymerizationRules = new Dictionary<string, char>();
+        private readonly Dictionary<string, char> polymerizationRules = new Dictionary<string, char>();
 
         public Solver(IEnumerable<string> input)
         {
@@ -33,7 +33,7 @@
             while (firstElement.Next != null)
             {
                 var node = new PolymerNode(firstElement.Value, firstElement.Next.Value, loop);
-                result = result.Add(node.GetResultDictionary().Decrement(firstElement.Value));
+                result = result.Add(node.GetResultDictionary(polymerizationRules).Decrement(firstElement.Value));
                 firstElement = firstElement.Next;
             }
 

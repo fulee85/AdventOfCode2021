@@ -16,14 +16,14 @@
             this.nodeLevel = nodeLevel;
         }
 
-        public Dictionary<char, long> GetResultDictionary()
+        public Dictionary<char, long> GetResultDictionary(Dictionary<string, char>  polymerizationRules)
         {
             if (shortcutDict.TryGetValue(this, out var result))
             {
                 return result;
             }
 
-            char middleElement = Solver.polymerizationRules[polymerPart];
+            char middleElement = polymerizationRules[polymerPart];
             if (nodeLevel == 1)
             {
                 return new Dictionary<char, long>()
@@ -34,8 +34,8 @@
 
             var leftChild = new PolymerNode(leftElement, middleElement, nodeLevel - 1);
             var rightChild = new PolymerNode(middleElement, rightElement, nodeLevel - 1);
-            var leftNodeResult = leftChild.GetResultDictionary();
-            var rightNodeResult = rightChild.GetResultDictionary();
+            var leftNodeResult = leftChild.GetResultDictionary(polymerizationRules);
+            var rightNodeResult = rightChild.GetResultDictionary(polymerizationRules);
 
             result = leftNodeResult.Add(rightNodeResult).Decrement(middleElement);
             shortcutDict.Add(this, result);

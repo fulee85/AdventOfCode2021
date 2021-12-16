@@ -34,6 +34,7 @@
     <ProjectReference Include="..\Day13-TransparentOrigami\Day13-TransparentOrigami.csproj" />
     <ProjectReference Include="..\Day14-ExtendedPolymerization\Day14-ExtendedPolymerization.csproj" />
     <ProjectReference Include="..\Day15-Chiton\Day15-Chiton.csproj" />
+    <ProjectReference Include="..\Day16-PacketDecoder\Day16-PacketDecoder.csproj" />
   </ItemGroup>
 
 </Project>

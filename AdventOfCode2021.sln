@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day15-Chiton", "Day15-Chito
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day16-PacketDecoder", "Day16-PacketDecoder\Day16-PacketDecoder.csproj", "{D27762A2-F0F8-47AA-9A32-71F8E8131A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day17-TrickShot", "Day17-TrickShot\Day17-TrickShot.csproj", "{32F9B01B-A6D1-4566-AC75-58A71F98C775}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day17-TrickShot", "Day17-TrickShot\Day17-TrickShot.csproj", "{32F9B01B-A6D1-4566-AC75-58A71F98C775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18-Snailfish", "Day18-Snailfish\Day18-Snailfish.csproj", "{154BF6EC-FC8E-4887-AA6B-FBE79D2FC6CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{32F9B01B-A6D1-4566-AC75-58A71F98C775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F9B01B-A6D1-4566-AC75-58A71F98C775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32F9B01B-A6D1-4566-AC75-58A71F98C775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154BF6EC-FC8E-4887-AA6B-FBE79D2FC6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154BF6EC-FC8E-4887-AA6B-FBE79D2FC6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154BF6EC-FC8E-4887-AA6B-FBE79D2FC6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154BF6EC-FC8E-4887-AA6B-FBE79D2FC6CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

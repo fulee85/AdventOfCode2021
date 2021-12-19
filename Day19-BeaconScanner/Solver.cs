@@ -33,7 +33,6 @@ namespace Day19_BeaconScanner
         {
             // Find pair of scanners with overlapping regions with 12 beacons
 
-            scanners[0].IsTransformed = true;
             scanners[0].Vector = new Vector(0, 0, 0);
             var transformedScannersQueue = new Queue<Scanner>();
             transformedScannersQueue.Enqueue(scanners[0]);
@@ -54,31 +53,6 @@ namespace Day19_BeaconScanner
                 }
 
                 notTransformedScanners.ExceptWith(newTransformedScanners);
-            }
-
-
-            scanners[0].IsTransformed = true;
-            for (int i = 0; i < scanners.Count - 1; i++)
-            {
-                for (int j = i + 1; j < scanners.Count; j++)
-                {
-                    if (scanners[i].CanOverlapWith(scanners[j]))
-                    {
-                        scanners[i].DoOverlapWith(scanners[j]);
-                        if (scanners[i].IsTransformed)
-                        {
-                            scanners[j].TransformBeacons(i);
-                        }
-                        else if (scanners[j].IsTransformed)
-                        {
-                            scanners[i].TransformBeacons(j);
-                        }
-                        else
-                        {
-                            throw new Exception("");
-                        }
-                    }
-                }
             }
 
             var vectors = new HashSet<Vector>();

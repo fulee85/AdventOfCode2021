@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Day19BeaconScanner
+﻿namespace Day19BeaconScanner
 {
     public class BeaconPair
     {
         private readonly Beacon beacon1;
         private readonly Beacon beacon2;
 
-        public BeaconPair(long distance, Beacon beacon1, Beacon beacon2)
+        public BeaconPair(Beacon beacon1, Beacon beacon2)
         {
-            Distance = distance;
+            Distance = beacon1.Distance(beacon2);
             this.beacon1 = beacon1;
             this.beacon2 = beacon2;
         }

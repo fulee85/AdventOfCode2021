@@ -13,10 +13,7 @@ namespace Day19BeaconScanner
         private readonly Dictionary<long, List<BeaconPair>> beaconPairs = new();
 
         public IEnumerable<Beacon> Beacons => beacons;
-
-        public bool IsTransformed { get; set; } = false;
         public int Id => id;
-
         public Vector Vector { get; set; }
 
         public Scanner(int id, List<Beacon> beacons)
@@ -32,21 +29,21 @@ namespace Day19BeaconScanner
                     {
                         beaconPairs[distance] = new List<BeaconPair>();
                     }
-                    beaconPairs[distance].Add(new BeaconPair(beacons[i].Distance(beacons[j]), beacons[i], beacons[j]));
+                    beaconPairs[distance].Add(new BeaconPair(beacons[i], beacons[j]));
                 }
             }
         }
 
         public bool CanOverlapWith(Scanner other)
         {
-            var matchingDistanceCount = 0;
+            var matchingDistancesCount = 0;
             foreach (var beaconPair in beaconPairs)
             {
                 var overlapCount = other.MatchingPairsCount(beaconPair.Key, beaconPair.Value.Count);
-                matchingDistanceCount += overlapCount;
+                matchingDistancesCount += overlapCount;
             }
 
-            return matchingDistanceCount >= 66; // 12 * (12 - 1) / 2
+            return matchingDistancesCount >= 66; // 12 * (12 - 1) / 2
         }
 
         private int MatchingPairsCount(long beaconPairDist, int count)
@@ -61,11 +58,6 @@ namespace Day19BeaconScanner
 
         public void TransformBeacons(int i)
         {
-            if (IsTransformed)
-            {
-                return;
-            }
-
             var matchingPairsEnumerator = GetMatchingPairs(beacons, i).GetEnumerator();
             matchingPairsEnumerator.MoveNext();
             var firstMatch = matchingPairsEnumerator.Current;
@@ -89,8 +81,6 @@ namespace Day19BeaconScanner
             Vector = shiftVector;
 
             beacons.ForEach(b => b.ShiftCoordinates(shiftVector));
-
-            IsTransformed = true;
         }
 
         private Vector CalculateShiftVector((Beacon abs, Beacon rel) firstMatch)

@@ -8,13 +8,11 @@
 
         private Dictionary<int, HashSet<Beacon>> CanMatchingBeacons = new Dictionary<int, HashSet<Beacon>>();
 
-        public IEnumerable<Beacon> MatchingBeacons => CanMatchingBeacons.SelectMany(kv => kv.Value);
-
         public int X => x;
         public int Y => y;
         public int Z => z;
 
-        public Beacon(int x, int y, int z) //, string id)
+        public Beacon(int x, int y, int z)
         {
             this.x = x;
             this.y = y;

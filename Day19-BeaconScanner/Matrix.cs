@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Day19BeaconScanner
+﻿namespace Day19BeaconScanner
 {
     public class Matrix
     {
@@ -17,7 +11,7 @@ namespace Day19BeaconScanner
 
         public void SetX(int x, bool negate)
         {
-            values[0,x] = negate ? -1 : 1;
+            values[0, x] = negate ? -1 : 1;
         }
 
         public void SetY(int y, bool negate)

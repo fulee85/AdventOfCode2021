@@ -44,7 +44,7 @@ namespace Tests.Day18
             var result = solver.SolvePartTwo();
 
             // Assert
-            result.Should().Be("");
+            result.Should().Be("3993");
         }
     }
 }

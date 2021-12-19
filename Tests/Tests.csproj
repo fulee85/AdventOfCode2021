@@ -37,6 +37,7 @@
     <ProjectReference Include="..\Day16-PacketDecoder\Day16-PacketDecoder.csproj" />
     <ProjectReference Include="..\Day17-TrickShot\Day17-TrickShot.csproj" />
     <ProjectReference Include="..\Day18-Snailfish\Day18-Snailfish.csproj" />
+    <ProjectReference Include="..\Day19-BeaconScanner\Day19-BeaconScanner.csproj" />
   </ItemGroup>
 
 </Project>

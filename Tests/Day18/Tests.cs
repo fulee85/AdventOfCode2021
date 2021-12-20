@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Day18_Snailfish;
-using FluentAssertions;
-using Xunit;
+﻿using Day18_Snailfish;
 
 namespace Tests.Day18
 {

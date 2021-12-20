@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-using Day19_BeaconScanner;
-using FluentAssertions;
-using Xunit.Abstractions;
+﻿using Day19_BeaconScanner;
 
 namespace Tests.Day19
 {

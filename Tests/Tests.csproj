@@ -39,6 +39,7 @@
     <ProjectReference Include="..\Day18-Snailfish\Day18-Snailfish.csproj" />
     <ProjectReference Include="..\Day19-BeaconScanner\Day19-BeaconScanner.csproj" />
     <ProjectReference Include="..\Day20-TrenchMap\Day20-TrenchMap.csproj" />
+    <ProjectReference Include="..\Day21-DiracDice\Day21-DiracDice.csproj" />
   </ItemGroup>
 
 </Project>

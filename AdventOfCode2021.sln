@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day19-BeaconScanner", "Day1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day20-TrenchMap", "Day20-TrenchMap\Day20-TrenchMap.csproj", "{164D018A-71BD-4803-BA87-8349D9450A27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day21-DiracDice", "Day21-DiracDice\Day21-DiracDice.csproj", "{3C38D72F-5E1F-456C-A8A1-A122FA15314E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day21-DiracDice", "Day21-DiracDice\Day21-DiracDice.csproj", "{3C38D72F-5E1F-456C-A8A1-A122FA15314E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day22-ReactorReboot", "Day22-ReactorReboot\Day22-ReactorReboot.csproj", "{C839F2C8-8070-47A0-A07A-E38114CE400C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{3C38D72F-5E1F-456C-A8A1-A122FA15314E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C38D72F-5E1F-456C-A8A1-A122FA15314E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C38D72F-5E1F-456C-A8A1-A122FA15314E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C839F2C8-8070-47A0-A07A-E38114CE400C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C839F2C8-8070-47A0-A07A-E38114CE400C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C839F2C8-8070-47A0-A07A-E38114CE400C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C839F2C8-8070-47A0-A07A-E38114CE400C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

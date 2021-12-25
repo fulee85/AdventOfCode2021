@@ -41,6 +41,7 @@
     <ProjectReference Include="..\Day20-TrenchMap\Day20-TrenchMap.csproj" />
     <ProjectReference Include="..\Day21-DiracDice\Day21-DiracDice.csproj" />
     <ProjectReference Include="..\Day22-ReactorReboot\Day22-ReactorReboot.csproj" />
+    <ProjectReference Include="..\Day24-ArithmeticLogicUnit\Day24-ArithmeticLogicUnit.csproj" />
   </ItemGroup>
 
 </Project>

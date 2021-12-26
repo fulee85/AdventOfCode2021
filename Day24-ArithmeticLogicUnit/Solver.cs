@@ -6,6 +6,7 @@ namespace Day24_ArithmeticLogicUnit
     public class Solver
     {
         private readonly IEnumerable<string> input;
+        private long minValue;
 
         public Solver(IEnumerable<string> input)
         {
@@ -18,7 +19,7 @@ namespace Day24_ArithmeticLogicUnit
             var instructionsFactory = new InstructionFactory(modelNumber);
             var instructionsLists = instructionsFactory.CreateInstructionsLists(input).ToList();
 
-            var aluStateContexts = new HashSet<AluStateContext> { new AluStateContext("", new AluState(0,0,0))};
+            var aluStateContexts = new HashSet<AluStateContext> { new AluStateContext("", new AluState(0,0,0), "")};
             for (int i = 0; i < instructionsLists.Count; i++)
             {
                 var newAluStateContexts = new HashSet<AluStateContext>();
@@ -35,11 +36,15 @@ namespace Day24_ArithmeticLogicUnit
                             instruction.Execute(alu);
                         }
                         
-                        var newAluStateContext = new AluStateContext(aluStateContext.MaxNumber + digit.ToString(), alu.GetAluState());
+                        var newAluStateContext = new AluStateContext(
+                            aluStateContext.MaxNumber + digit.ToString(),
+                            alu.GetAluState(),
+                            aluStateContext.MinNumber + digit.ToString());
 
                         if (newAluStateContexts.TryGetValue(newAluStateContext, out var stateContext))
                         {
                             stateContext.MaxNumber = Math.Max(stateContext.MaxNumberValue, newAluStateContext.MaxNumberValue).ToString();
+                            stateContext.MaxNumber = Math.Min(stateContext.MinNumberValue, newAluStateContext.MinNumberValue).ToString();
                         }
                         else
                         {
@@ -52,6 +57,7 @@ namespace Day24_ArithmeticLogicUnit
             }
 
             var maxValue = long.MinValue;
+            minValue = long.MaxValue;
             foreach (var aluStateContext in aluStateContexts)
             {
                 if (aluStateContext.AluState.Z == 0)
@@ -59,6 +65,10 @@ namespace Day24_ArithmeticLogicUnit
                     if (aluStateContext.MaxNumberValue > maxValue)
                     {
                         maxValue = aluStateContext.MaxNumberValue;
+                    }
+                    if (aluStateContext.MinNumberValue < minValue)
+                    {
+                        minValue = aluStateContext.MinNumberValue;
                     }
                 }
             }
@@ -69,7 +79,7 @@ namespace Day24_ArithmeticLogicUnit
 
         public string SolvePartTwo()
         {
-            return string.Empty;
+            return minValue.ToString();
         }
     }
 }

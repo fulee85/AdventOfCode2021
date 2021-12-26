@@ -42,6 +42,7 @@
     <ProjectReference Include="..\Day21-DiracDice\Day21-DiracDice.csproj" />
     <ProjectReference Include="..\Day22-ReactorReboot\Day22-ReactorReboot.csproj" />
     <ProjectReference Include="..\Day24-ArithmeticLogicUnit\Day24-ArithmeticLogicUnit.csproj" />
+    <ProjectReference Include="..\Day25-SeaCucumber\Day25-SeaCucumber.csproj" />
   </ItemGroup>
 
 </Project>

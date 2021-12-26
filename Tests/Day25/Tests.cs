@@ -37,7 +37,7 @@ v.v..>>v.v
             var result = solver.SolvePartTwo();
 
             // Assert
-            result.Should().Be("xx");
+            result.Should().Be("");
         }
     }
 }
